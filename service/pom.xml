@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>service</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>service_hosp</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -18,18 +22,18 @@
 
     <dependencies>
         <!--model实体类-->
-        <!--<dependency>
+        <dependency>
             <groupId>com.zryx</groupId>
             <artifactId>model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>-->
+        </dependency>
 
 
-       <!-- <dependency>
+        <dependency>
             <groupId>com.zryx</groupId>
             <artifactId>service_util</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>-->
+        </dependency>
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -52,15 +56,15 @@
             <optional>true</optional>
         </dependency>
         <!-- 服务调用feign -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+        </dependency>-->
         <!-- 服务注册 -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
+        <!-- <dependency>
+             <groupId>com.alibaba.cloud</groupId>
+             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+         </dependency>-->
         <!-- 流量控制 -->
         <!-- <dependency>
              <groupId>com.alibaba.cloud</groupId>
@@ -88,7 +92,8 @@
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
-                <includes> <include>**/*.yml</include>
+                <includes>
+                    <include>**/*.yml</include>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
                 </includes>
